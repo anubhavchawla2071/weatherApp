@@ -14,8 +14,9 @@ export default function Home() {
         lat=data[0].lat
         lon=data[0].lon
       })
-      console.log(lat)
-      console.log(lon)
+      await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=a9ce545675b3585a826f7305ac5ad22c`)
+      .then((result)=>{return result.json()})
+      .then((data)=>console.log(data))
   }
   return (
     <div className="container">
