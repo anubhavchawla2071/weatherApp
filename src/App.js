@@ -11,6 +11,7 @@ function App() {
   };
   
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+  
   return (
     <>
       <Navbar/>
