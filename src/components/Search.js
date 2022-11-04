@@ -20,7 +20,7 @@ export default function Search() {
   useEffect(() => {
     if(location.city !==""){
       fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${location.city}${location.state!==""?","+location.state:""}${location.country!==""?","+location.country:""}&limit=5&appid=a9ce545675b3585a826f7305ac5ad22c`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${location.city}${location.state!==""?","+location.state:""}${location.country!==""?","+location.country:""}&limit=5&appid=a9ce545675b3585a826f7305ac5ad22c`
       )
         .then((result) => {
           return result.json();
@@ -43,6 +43,7 @@ export default function Search() {
           return result.json();
         })
         .then((data) => {
+          console.log(data);
           setResult(data);
         });
     }
