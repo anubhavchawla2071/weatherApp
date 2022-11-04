@@ -7,6 +7,7 @@ export default function Home() {
   const [lat, setLat] = useState(null);
   const [lon, setLon] = useState(null);
   const [data, setData] = useState(null);
+
   const successCallback = (position) => {
     setLat(position.coords.latitude);
     setLon(position.coords.longitude);
@@ -44,8 +45,8 @@ export default function Home() {
 
   return (
     <>
-    <div onClick={handleClick} style={{"cursor":"pointer"}} >
-    <FaSistrix size="2em" className="my-2 mx-3" />
+    <div onClick={handleClick} style={{"cursor":"pointer","width":"50px"}} >
+      <FaSistrix size="2em" className="my-2 mx-3" />
     </div>
       
       <div className="container">
